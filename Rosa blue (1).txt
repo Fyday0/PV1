@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa Azul Sob o Céu Estrelado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .estrela {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: piscar 1s infinite;
+        }
+
+        @keyframes piscar {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .rosa {
+            width: 200px;
+            height: 300px;
+            position: relative;
+        }
+
+        .caule {
+            width: 10px;
+            height: 150px;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            left: 95px;
+            border-radius: 5px 5px 0 0;
+            transform-origin: bottom center;
+            animation: crescer 1s ease-in-out forwards;
+        }
+
+        .petala {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #5f9ea0; /* Azul */
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .petala:nth-child(1) {
+            top: 20px;
+            left: 50px;
+            transform: rotate(30deg) scale(0.5);
+            animation: abrirPetala1 3s ease-in-out forwards;
+        }
+
+        .petala:nth-child(2) {
+            top: 30px;
+            left: 70px;
+            transform: rotate(60deg) scale(0.5);
+            animation: abrirPetala2 3s ease-in-out forwards;
+        }
+
+        .petala:nth-child(3) {
+            top: 60px;
+            left: 90px;
+            transform: rotate(90deg) scale(0.5);
+            animation: abrirPetala3 3s ease-in-out forwards;
+        }
+
+        .petala:nth-child(4) {
+            top: 60px;
+            left: 20px;
+            transform: rotate(120deg) scale(0.5);
+            animation: abrirPetala4 3s ease-in-out forwards;
+        }
+
+        .petala:nth-child(5) {
+            top: 30px;
+            left: 0px;
+            transform: rotate(150deg) scale(0.5);
+            animation: abrirPetala5 3s ease-in-out forwards;
+        }
+
+        .petala:nth-child(6) {
+            top: 20px;
+            left: 20px;
+            transform: rotate(180deg) scale(0.5);
+            animation: abrirPetala6 3s ease-in-out forwards;
+        }
+
+        .petala:nth-child(7) {
+            top: 40px;
+            left: 120px;
+            transform: rotate(210deg) scale(0.5);
+            animation: abrirPetala7 3s ease-in-out forwards;
+        }
+
+        .centro {
+            width: 40px;
+            height: 40px;
+            background-color: #5f9ea0; /* Azul */
+            position: absolute;
+            top: 120px;
+            left: 80px;
+            border-radius: 50%;
+            animation: aparecerCentro 3s ease-in-out forwards;
+        }
+
+        @keyframes crescer {
+            from {
+                transform: scaleY(0);
+            }
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes abrirPetala1 {
+            0% {
+                transform: rotate(30deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(30deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(30deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abrirPetala2 {
+            0% {
+                transform: rotate(60deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(60deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(60deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abrirPetala3 {
+            0% {
+                transform: rotate(90deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(90deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(90deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abrirPetala4 {
+            0% {
+                transform: rotate(120deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(120deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(120deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abrirPetala5 {
+            0% {
+                transform: rotate(150deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(150deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(150deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abrirPetala6 {
+            0% {
+                transform: rotate(180deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(180deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(180deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes abrirPetala7 {
+            0% {
+                transform: rotate(210deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: rotate(210deg) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(210deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes aparecerCentro {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Céu Estrelado -->
+    <div id="ceu">
+        <!-- Adicionei 150 estrelas -->
+        <div class="estrela" style="top: 10%; left: 15%;"></div>
+        <div class="estrela" style="top: 20%; left: 85%;"></div>
+        <div class="estrela" style="top: 30%; left: 45%;"></div>
+        <div class="estrela" style="top: 40%; left: 70%;"></div>
+        <!-- Adicione mais estrelas conforme desejar -->
+        <!-- Lembre-se de ajustar as posições para criar uma distribuição aleatória -->
+    </div>
+
+    <!-- Rosa Azul -->
+    <div class="rosa">
+        <div class="caule"></div>
+        <div class="petala"></div>
+        <div class="petala"></div>
+        <div class="petala"></div>
+        <div class="petala"></div>
+        <div class="petala"></div>
+        <div class="petala"></div>
+        <div class="centro"></div>
+    </div>
+</body>
+</html>
